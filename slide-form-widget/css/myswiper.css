@@ -1,0 +1,91 @@
+body {
+  background-color: lightgrey; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+.tab-swiper .swiper-wrapper {
+  padding-left: 0px;
+  padding-right: 0px;
+  transform: translate3d(0px, 0px, 0px);
+  width: 100%;
+  height: 42px;
+  transition-duration: 0.3s; }
+  .tab-swiper .swiper-wrapper .tab-item {
+    height: 32px;
+    width: auto;
+    line-height: 32px;
+    margin: 5px 0;
+    padding: 0 20px;
+    display: block;
+    -webkit-tap-highlight-color: transparent; }
+  .tab-swiper .swiper-wrapper .tab-item.on {
+    color: #0094d0; }
+    .tab-swiper .swiper-wrapper .tab-item.on .tab-bar {
+      margin-top: 2px;
+      border-bottom: 3px solid #0094d0; }
+
+.content-swiper form {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+.content-swiper .content-item {
+  padding-top: 35px; }
+  .content-swiper .content-item .content-item-txt {
+    height: 41px;
+    line-height: 41px;
+    font-size: 17px;
+    width: 70%;
+    padding: 0 4%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 17px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    -webkit-tap-highlight-color: transparent;
+    position: relative; }
+    .content-swiper .content-item .content-item-txt input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 1.5em;
+      min-height: 100%;
+      height: 3em;
+      max-height: 100%;
+      outline: 0;
+      -webkit-border-radius: inherit;
+      border-radius: inherit;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      cursor: pointer;
+      filter: Alpha(Opacity=0);
+      opacity: 0;
+      z-index: 2; }
+  .content-swiper .content-item .content-item-txt.on {
+    border: 1px solid #0094d0;
+    color: #0094d0; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center; }
+  footer .submit-btn {
+    display: block;
+    background-color: #0094d0;
+    color: white;
+    height: 60px;
+    line-height: 60px;
+    margin: 5px 10px; }
+
+/*# sourceMappingURL=myswiper.css.map */

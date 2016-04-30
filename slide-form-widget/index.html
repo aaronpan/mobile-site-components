@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slide form widget</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/myswiper.css">
+  </head>
+
+  <body>
+    <div class="swiper-container tab-swiper">
+      <div class="swiper-wrapper text-center">
+        <a href="javascript:void(0);" class="swiper-slide tab-item on" index="0">
+          <div class="tab-title">1. color</div>
+          <div class="tab-bar"></div>
+        </a>
+
+        <a href="javascript:void(0);" class="swiper-slide tab-item" index="1">
+          <div class="tab-title">2. food</div>
+          <div class="tab-bar"></div>
+        </a>
+
+        <a href="javascript:void(0);" class="swiper-slide tab-item" index="2">
+          <div class="tab-title">3. fruit</div>
+          <div class="tab-bar"></div>
+        </a>
+
+        <a href="javascript:void(0);" class="swiper-slide tab-item" index="3">
+          <div class="tab-title">4. language</div>
+          <div class="tab-bar"></div>
+        </a>
+
+        <a href="javascript:void(0);" class="swiper-slide tab-item" index="4">
+          <div class="tab-title">5. sport</div>
+          <div class="tab-bar"></div>
+        </a>
+      </div>
+    </div>
+
+    <form action="" class="my-form validate">
+      <div class="swiper-container content-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide content-item" index="0">
+            <div class="content-item-txt">
+              <span>red</span>
+              <input type="radio" name="color" value="red" class="required content-item-radio" />
+            </div>
+
+            <div class="content-item-txt">
+              <span>blue</span>
+              <input type="radio" name="color" value="blue" class="required content-item-radio" />
+            </div>
+
+            <div class="content-item-txt">
+              <span>yellow</span>
+              <input type="radio" name="color" value="yellow" class="required content-item-radio" />
+            </div>
+          </div>
+
+          <div class="swiper-slide content-item" index="1">
+            <div class="content-item-txt">
+              <span>noodle</span>
+              <input type="radio" name="food" value="noodle" class="required content-item-radio" />
+            </div>
+
+            <div class="content-item-txt">
+              <span>steak</span>
+              <input type="radio" name="food" value="steak" class="required content-item-radio" />
+            </div>
+
+            <div class="content-item-txt">
+              <span>hamburger</span>
+              <input type="radio" name="food" value="hamburger" class="required content-item-radio" />
+            </div>
+          </div>
+
+          <div class="swiper-slide content-item" index="2">
+            <div class="content-item-txt">
+              <span>apple</span>
+              <input type="radio" name="fruit" value="apple" class="required content-item-radio" />
+            </div>
+
+            <div class="content-item-txt">
+              <span>orange</span>
+              <input type="radio" name="fruit" value="orange" class="required content-item-radio" />
+            </div>
+
+            <div class="content-item-txt">
+              <span>grape</span>
+              <input type="radio" name="fruit" value="grape" class="required content-item-radio" />
+            </div>
+          </div>
+
+          <div class="swiper-slide content-item" index="3">
+            <div class="content-item-txt">
+              <span>ruby</span>
+              <input type="radio" name="language" value="ruby" class="required content-item-radio" />
+            </div>
+
+            <div class="content-item-txt">
+              <span>java</span>
+              <input type="radio" name="language" value="java" class="required content-item-radio" />
+            </div>
+
+            <div class="content-item-txt">
+              <span>lisp</span>
+              <input type="radio" name="language" value="lisp" class="required content-item-radio" />
+            </div>
+          </div>
+
+          <div class="swiper-slide content-item" index="4">
+            <div class="content-item-txt">
+              <span>badminton</span>
+              <input type="radio" name="sport" value="badminton" class="required content-item-radio" />
+            </div>
+
+            <div class="content-item-txt">
+              <span>basketball</span>
+              <input type="radio" name="sport" value="basketball" class="required content-item-radio" />
+            </div>
+
+            <div class="content-item-txt">
+              <span>baseball</span>
+              <input type="radio" name="sport" value="baseball" class="required content-item-radio" />
+            </div>
+
+            <div class="content-item-txt">
+              <span>tennis</span>
+              <input type="radio" name="sport" value="tennis" class="required content-item-radio" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <footer>
+      <a href="javascript:void(0);" class="submit-btn">Submit</a>
+    </footer>
+    <script type="text/javascript" src="./js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.validate.js"></script>
+    <script type="text/javascript" src="./js/swiper.min.js"></script>
+    <script type="text/javascript" src="./js/myswiper.js"></script>
+    <script type="text/javascript" src="./js/my-validate.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        MySwiper.initSwipers();
+
+        $(".submit-btn").bind("tap click", function(event){
+          event.preventDefault();
+          if ($(".my-form").valid()) {
+            $(".my-form").trigger("submit");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
