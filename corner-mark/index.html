@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>corner mark</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <style type="text/css">
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      ul li {
+        height: 60px;
+        border: 1px solid lightgrey;
+        margin-bottom: 10px;
+        padding: 10px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* corner css */
+      .float-top-left-corner {
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        color:#fff;
+        font-family:"Microsoft YaHei";
+        padding-left: 5px;
+      }
+
+      .float-top-left-corner:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50px;
+        z-index: -1;
+        border-style: solid;
+        border-color: #e93a3a transparent transparent;
+        border-width: 30px 42px 0 42px;
+      }
+
+      .float-top-right-corner {
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 999;
+        color: #fff;
+        font-family: "Microsoft YaHei";
+        padding-right: 5px;
+      }
+
+      .float-top-right-corner:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -60px;
+        z-index: -1;
+        border-style: solid;
+        border-color: #1cb9bf transparent transparent;
+        border-width: 30px 60px 0 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li>
+        <span class="float-top-left-corner">1</span>
+        Item 1
+      </li>
+      <li>
+        <span class="float-top-left-corner">2</span>
+        Item 2
+        <span class="float-top-right-corner">Pro</span>
+      </li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+  </body>
+</html>
